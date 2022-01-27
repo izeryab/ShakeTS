@@ -2,12 +2,12 @@
 small library to detect shake in mobile devices
 
 ## How to use this
-Create Method like:
+### Create Method like:
 
-`
- detectShake() {
+
+    detectShake() {
+    //Create object
     var myShakeEvent = new Shake();
-    
     // Start listening to device motion
     myShakeEvent.start();
 
@@ -20,10 +20,13 @@ Create Method like:
      //do something on shake
      console.log("Shake Occur");
     }
-  }`
+    }
   
 FOR IOS we may require permission to access device motion sensor (using user action)
- ` window.document.onclick = function () {
+ 
+ 
+
+    window.document.onclick = function () {
           if (
             typeof (DeviceMotionEvent as any).requestPermission()
               .requestPermission === "function"
@@ -32,15 +35,15 @@ FOR IOS we may require permission to access device motion sensor (using user act
               .requestPermission()
               .then((permissionState) => {
                 if (permissionState === "granted") {
-                 detectShake();
+                  that.detectShake();
                 }
               })
               .catch(console.error);
           } else {
             // handle regular non iOS 13+ devices
-            detectShake();
+            that.detectShake();
           }
-        };`
+        };
         
   For Android device simply use detectshake method
   
