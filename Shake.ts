@@ -1,3 +1,6 @@
+interface Document {
+  CustomEvent;
+}
 class Shake {
   protected hasDeviceMotion;
  
