@@ -6,7 +6,7 @@ class Shake {
  
 
   /**  Minimum movement force to consider. */
-  protected static MIN_FORCE = (typeof Capacitor!=='undefined')? Capacitor.getPlatform() == "ios"?3:5:5;
+  protected static MIN_FORCE = 5;
     
   /**
    * Minimum times in a shake gesture that the direction of movement needs to
